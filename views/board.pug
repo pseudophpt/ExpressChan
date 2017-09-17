@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title Imageboard
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Inconsolata")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    link(rel="stylesheet", href=stylesheet, id="theme_css")
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin="anonymous")
+    script(src="/javascripts/functions.js")
+body.body-style
+  .container.container-style
+    .row.page-header
+      .col-xs-2(style="text-align: left;")!= return_text
+      .col-xs-8(style="text-align: center;")!= boards
+      .col-xs-2(style="text-align: right;")
+        a(href= login_link)= login_text
+    .row(style="text-align:center")
+      img(src= banner_link)
+    .row.text-center
+      h1= board_text
+    .row(style="padding-top: 30px;")
+      .col-xs-2
+      .col-xs-8
+        form(method='post', enctype='multipart/form-data')
+          .row
+            .col-xs-9.post.panel.panel_default
+              h1(style="text-align: center")!= newpost_text
+              p Post
+              p
+                textarea.post-textarea(name='post_text')
+              p Image: 
+                span(class="file-specifications")
+                  = filesize
+                  = filetype
+              p
+                input(type='file', name='image', id='image')
+            .col-xs-3
+              p Captcha: 
+                input(class='normal-body', type='text', name='captcha_text', style='border-width: 0px')
+              != captcha
+          p(style='text-align:center; padding-top: 15px;')
+            input.inverse-body(type='submit', value='Submit')
+      .col-xs-2
+    .row
+      .panel-group!= posts
+    .row!= footer
+    .row
+      .col-xs-2
+      .col-xs-8.text-center ExpressChan v1.00
+      .col-xs-2.text-center
+        select(class="normal-body", name="theme" id="theme")
+          option(name="light") Light
+          option(name="dark") Dark
+          option(name="cafe") Cafe

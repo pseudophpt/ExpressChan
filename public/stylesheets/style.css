@@ -1,0 +1,89 @@
+.body-style {
+  background-color: var(--body-bg-color); 
+  color: var(--body-text-color); 
+  font-family: 'Inconsolata', Times, serif;
+  font-size: 15px;
+}
+.normal-body {
+  color: #000;
+  background-color: #ffffff;
+}
+.inverse-body {
+  color: var(--body-bg-color);
+  background-color: var(--body-text-color)
+}
+.highlighted {
+  color: var(--highlighted-color);
+}
+.container-style {
+  padding: 5%; 
+}
+.post-heading {
+  background-color: var(--post-heading-bg-color) !important;
+  color: var(--body-text-color) !important;
+}
+.post {
+  background-color: var(--post-bg-color);
+}
+.username {
+  color: var(--username-color);
+  font-weight: 700;
+  font-family: 'Helvetica Neue', 'Helvetica'
+}
+.tripcode {
+  color: var(--tripcode-color);
+  font-weight: 700;
+  font-family: 'Helvetica Neue', 'Helvetica'
+}
+.post-id {
+  color: var(--post-id-color);
+  font-weight: 700;
+  font-family: 'Helvetica Neue', 'Helvetica'
+}
+.file-specifications {
+  font-family: 'Helvetica Neue', 'Helvetica';
+  font-size: 10px;
+  line-height: 1;
+}
+.post-textarea {
+  width: 100%; 
+  height: 100px; 
+  max-width: 100%;
+  color: #000;
+}
+.panel-default {
+  border-color: var(--post-bg-color);
+}
+.post-img {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: left;
+  max-width: 100%;
+}
+.post-img-only {
+  cursor: pointer;
+  max-height: 150px;
+}
+a:visited{
+  color: var(--link-color) !important;
+  text-decoration: none !important;
+}
+a:link {
+  color: var(--link-color) !important;
+  text-decoration: none !important;
+}
+a:hover {
+  color: var(--link-highlight-color) !important;
+  text-decoration: none !important;
+} 
+a:active {
+  color: var(--link-highlight-color) !important;
+  text-decoration: none !important;
+}
+.in-form {
+  display: inline;
+}
+#checkbox {
+    position: relative;
+    top: 3px;
+}

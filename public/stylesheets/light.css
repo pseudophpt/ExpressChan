@@ -1,0 +1,12 @@
+:root {
+  --highlighted-color:#9cc2e3;
+  --body-bg-color: #eee;
+  --body-text-color: #000;
+  --username-color: #666;
+  --tripcode-color: #444;
+  --post-id-color: #222;
+  --post-bg-color: #ddd;
+  --post-heading-bg-color: #ccc;
+  --link-color: #337ab7;
+  --link-highlight-color: #4895D8;
+}

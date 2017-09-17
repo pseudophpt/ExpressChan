@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title Imageboard
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Inconsolata")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    link(rel="stylesheet", href=stylesheet, id="theme_css")
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin="anonymous")
+    script(src="/javascripts/functions.js")
+body.body-style
+  .container.container-style
+    .row.page-header
+      .col-xs-2(style="text-align: left;")!= return_text
+      .col-xs-8(style="text-align: center;")!= boards
+      .col-xs-2(style="text-align: right;")
+    .row(style="text-align:center")
+      .col-xs-2
+      .col-xs-8.post.panel.panel_default
+        form(method="post" style="padding:30px;")
+          h1 Log in
+          p Use your admin or mod password.
+          p Password: 
+            input(class='normal-body', type="password", name="password")
+          p
+            input.inverse-body(type='submit', value='Submit')
+      .col-xs-2
+    .row
+      .col-xs-2
+      .col-xs-8.text-center ExpressChan v1.10
+      .col-xs-2.text-center
+        select(class="normal-body" name="theme" id="theme")
+          option(name="light") Light
+          option(name="dark") Dark
+          option(name="cafe") Cafe
